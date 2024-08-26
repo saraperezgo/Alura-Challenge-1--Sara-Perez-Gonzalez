@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Alura 1</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="Titulo_encriptador"></header>
+    <main>
+        <div class="Contenidos_Pagina">
+            <div class="Contenidos_Encriptador">
+                <textarea  onkeypress="return ((event.charCode >= 97 && event.charCode <= 122))"  id="texto_codificacion" class="container__input" name="Texto" placeholder="Ingrese el texto aqui"></textarea>
+                <div class="Contenidos__Encriptador2">
+                    <p class="Texto_reglas"><img src="./img/zondicons--exclamation-solid.png" width="20" height="20"/>Solo letras minúsculas y sin acentos</p>
+                        <div class="botones">
+                            <button  class="container__boton1" id="Encriptar" >Encriptar</button>
+                            <button  class="container__boton2" id="Desencriptar">Desencriptar</button>
+                        </div>
+                </div>
+            </div>
+            <div class="Ventana_Encriptado">
+                    <div class="Parrafo_Ventana_Encriptador" id="Parrafo_Ventana_Encriptador">
+                        <img src="./img/Muñeco.png" id="imagen" alt="anya pidiendo manisito">
+                        <p class="Texto_Parrafo_1" id="tex1">Ningún mensaje fue encontrado</p>
+                        <p class="Texto_Parrafo_2" id="tex2">Ingresa el texto que desees encriptar o desencriptar.</p>
+                    </div>
+            </div>
+        </div>
+        <div id="replacements" style="display:none">
+            <p class="texto_salida" id="rep_place"></p>
+        </div>    
+    </main>
+    <footer>
+
+    </footer>
+    <script src="app.js" defer></script> 
+</body>
+</html>

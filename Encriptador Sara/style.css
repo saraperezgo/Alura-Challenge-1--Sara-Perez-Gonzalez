@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #FAF3E0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.Contenidos_Pagina {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 40px;
+    width: 100%;
+    max-width: 1200px;
+    gap: 40px;
+}
+
+.Contenidos_Encriptador {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 0;
+    top: 60px;
+    flex: 1;
+    margin-right: 40px;
+}
+
+.Ventana_Encriptado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 420px;
+    height: 670px;
+    border-radius: 32px;
+    background-color: #FFFFFF;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    transition: all 0.3s ease;
+    margin-bottom: 20px; /* Espacio entre la ventana y los botones */
+}
+
+.Parrafo_Ventana_Encriptador {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    padding: 24px;
+}
+
+.Texto_Parrafo_1 {
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 800;
+    width: 360px;
+    height: 60px;
+    overflow: hidden;
+    color: #333333;
+}
+
+.Texto_Parrafo_2, .Texto_Parrafo_3 {
+    text-align: center;
+    font-size: 1rem;
+    color: #6C757D;
+}
+
+.container__input {
+    resize: none;
+    background-color: #FFF8E1;
+    border: 2px solid #F7B731;
+    height: 280px;
+    font-size: 1.8rem;
+    color: #212121;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 32px;
+    width: 100%;
+}
+
+::placeholder {
+    font-size: 1.8rem;
+    color: #9C9C9C;
+}
+
+.Texto_reglas {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: #5A5A5A;
+}
+
+.botones {
+    display: flex;
+    gap: 32px;
+    margin-top: 32px;
+}
+
+.container__boton1, .container__boton2 {
+    height: 67px;
+    width: 100%;
+    max-width: 328px;
+    font-size: 1.1rem;
+    border-radius: 24px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container__boton1 {
+    background: #FF6347;
+    border: none;
+    color: white;
+}
+
+.container__boton1:hover {
+    background: #FF4500;
+}
+
+.container__boton2 {
+    background: #F0F0F0;
+    border: 2px solid #FF6347;
+    color: #FF6347;
+}
+
+.container__boton2:hover {
+    background: #FF6347;
+    color: white;
+}
+
+/* Diseño responsivo */
+
+@media (max-width: 1024px) {
+    .Contenidos_Pagina {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .Ventana_Encriptado {
+        position: relative;
+        top: 20px;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Ventana_Encriptado {
+        width: 100%;
+        max-width: 340px;
+        height: auto;
+        padding: 16px;
+    }
+
+    .Texto_Parrafo_1 {
+        font-size: 1.5rem;
+    }
+
+    .container__input {
+        font-size: 1.5rem;
+        height: 200px;
+    }
+
+    .container__boton1, .container__boton2 {
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Ventana_Encriptado {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        padding: 12px;
+        margin-top: 20px;
+    }
+
+    .Texto_Parrafo_1 {
+        font-size: 1.3rem;
+    }
+
+    .container__input {
+        font-size: 1.2rem;
+        height: 180px;
+    }
+
+    .container__boton1, .container__boton2 {
+        max-width: 240px;
+        height: 55px;
+    }
+
+    .Parrafo_Ventana_Encriptador {
+        gap: 16px;
+    }
+
+    /* Nueva regla para mantener distancia entre botones e imagen */
+    .Ventana_Encriptado {
+        margin-bottom: 20px;
+    }
+}
